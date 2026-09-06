@@ -1,3 +1,7 @@
+## Live
+
+https://sandeshl702.github.io/will-azure-bill-me/
+
 # Will Azure Bill Me?
 
 A tiny, no-backend checklist for spotting Azure free-tier surprises before they become a Cost Management notification.
