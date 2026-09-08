@@ -1,2 +1,2 @@
 :HL["/will-azure-bill-me/_next/static/chunks/1jzqfx2s-kdy8.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"oTCrpyTvgeNL3Y0m9Q98P"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"JWSNxZ9JsvZNg_kzCPQCp"}
