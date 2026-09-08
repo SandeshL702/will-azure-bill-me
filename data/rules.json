@@ -1,0 +1,216 @@
+{
+  "updated": "2026-09-08",
+  "disclaimer": "Educational estimates from published free-tier patterns. Not Microsoft billing. Offers vary by account, region and date.",
+  "resources": [
+    {
+      "id": "static",
+      "title": "Static Web Apps",
+      "blurb": "HTML/JS site on the Free plan.",
+      "risk": "free",
+      "badge": "Free",
+      "companions": [],
+      "stopDoesNotStop": false,
+      "fix": "Stay on Free plan. Custom domains and staging slots have limits."
+    },
+    {
+      "id": "functions",
+      "title": "Functions · Consumption",
+      "blurb": "Pay per run. Monthly grant is small.",
+      "risk": "free",
+      "badge": "Free*",
+      "companions": ["logs"],
+      "stopDoesNotStop": false,
+      "fix": "Watch executions and GB-s. Turn off noisy timers."
+    },
+    {
+      "id": "app-service",
+      "title": "App Service · F1",
+      "blurb": "One tiny shared web app.",
+      "risk": "free",
+      "badge": "Free*",
+      "companions": [],
+      "stopDoesNotStop": false,
+      "fix": "Do not scale to B1/S1 unless you want a bill."
+    },
+    {
+      "id": "blob",
+      "title": "Blob Storage",
+      "blurb": "A few GB on Standard LRS is usually fine.",
+      "risk": "free",
+      "badge": "Free*",
+      "companions": ["egress"],
+      "stopDoesNotStop": false,
+      "fix": "Public containers plus heavy downloads burn egress."
+    },
+    {
+      "id": "vm",
+      "title": "Virtual Machine",
+      "blurb": "Compute looks free-ish. Companions are not.",
+      "risk": "careful",
+      "badge": "Careful",
+      "companions": ["disks", "public-ip"],
+      "stopDoesNotStop": false,
+      "fix": "Deallocate when idle. Delete when the lab is over."
+    },
+    {
+      "id": "sql",
+      "title": "Azure SQL",
+      "blurb": "Free offer is one small DB, time-boxed.",
+      "risk": "careful",
+      "badge": "Careful",
+      "companions": [],
+      "stopDoesNotStop": true,
+      "fix": "Pause or delete after the lab. Serverless still has a floor."
+    },
+    {
+      "id": "cosmos",
+      "title": "Cosmos DB",
+      "blurb": "Free tier is one account, tight RU/s cap.",
+      "risk": "careful",
+      "badge": "Careful",
+      "companions": [],
+      "stopDoesNotStop": true,
+      "fix": "Do not raise RU/s. Delete the account after the demo."
+    },
+    {
+      "id": "containers",
+      "title": "Container Apps",
+      "blurb": "Consumption grant exists. Replicas eat it.",
+      "risk": "careful",
+      "badge": "Careful",
+      "companions": ["logs", "acr"],
+      "stopDoesNotStop": false,
+      "fix": "Min replicas = 0. Delete the environment after."
+    },
+    {
+      "id": "logs",
+      "title": "Log Analytics",
+      "blurb": "Verbose logs leave the free ingest cap.",
+      "risk": "careful",
+      "badge": "Careful",
+      "companions": [],
+      "stopDoesNotStop": true,
+      "fix": "Lower retention. Stop sending debug traces."
+    },
+    {
+      "id": "egress",
+      "title": "Internet egress",
+      "blurb": "Outbound data above the allowance is metered.",
+      "risk": "careful",
+      "badge": "Careful",
+      "companions": [],
+      "stopDoesNotStop": false,
+      "fix": "Keep test traffic inside the region."
+    },
+    {
+      "id": "public-ip",
+      "title": "Public IP",
+      "blurb": "Standard IPs bill even when the VM is stopped.",
+      "risk": "bill",
+      "badge": "Will bill",
+      "companions": [],
+      "stopDoesNotStop": true,
+      "fix": "Delete the IP or use Bastion / no public NIC."
+    },
+    {
+      "id": "disks",
+      "title": "Managed disk",
+      "blurb": "Disk keeps billing after the VM stops.",
+      "risk": "bill",
+      "badge": "Will bill",
+      "companions": [],
+      "stopDoesNotStop": true,
+      "fix": "Delete the VM and the disk together."
+    },
+    {
+      "id": "acr",
+      "title": "Container Registry",
+      "blurb": "Storage and pull traffic are metered.",
+      "risk": "bill",
+      "badge": "Will bill",
+      "companions": [],
+      "stopDoesNotStop": true,
+      "fix": "Use a tiny Basic registry. Delete images after."
+    },
+    {
+      "id": "nat",
+      "title": "NAT Gateway",
+      "blurb": "Hourly + data from the minute it exists.",
+      "risk": "bill",
+      "badge": "Will bill",
+      "companions": [],
+      "stopDoesNotStop": true,
+      "fix": "Do not add this to a student lab."
+    },
+    {
+      "id": "vpn",
+      "title": "VPN Gateway",
+      "blurb": "Provisioned = billed, even with zero tunnels.",
+      "risk": "bill",
+      "badge": "Will bill",
+      "companions": ["public-ip"],
+      "stopDoesNotStop": true,
+      "fix": "Delete the gateway after the peering demo."
+    },
+    {
+      "id": "app-gateway",
+      "title": "Application Gateway",
+      "blurb": "Capacity units start immediately.",
+      "risk": "bill",
+      "badge": "Will bill",
+      "companions": ["public-ip"],
+      "stopDoesNotStop": true,
+      "fix": "Skip it. Use App Service or Static Web Apps."
+    },
+    {
+      "id": "firewall",
+      "title": "Azure Firewall",
+      "blurb": "One of the fastest ways to blow a free account.",
+      "risk": "bill",
+      "badge": "Will bill",
+      "companions": ["public-ip"],
+      "stopDoesNotStop": true,
+      "fix": "Use NSGs only in labs."
+    },
+    {
+      "id": "marketplace",
+      "title": "Marketplace image",
+      "blurb": "License fee sits on top of compute.",
+      "risk": "bill",
+      "badge": "Will bill",
+      "companions": [],
+      "stopDoesNotStop": true,
+      "fix": "Use Ubuntu/Windows Marketplace-free images."
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "az104",
+      "emoji": "🧪",
+      "title": "AZ-104 lab",
+      "hook": "One VM to practise NSGs.",
+      "picks": ["vm", "logs"]
+    },
+    {
+      "id": "website",
+      "emoji": "🌐",
+      "title": "Just a website",
+      "hook": "HTML on Azure, nothing fancy.",
+      "picks": ["static"]
+    },
+    {
+      "id": "container",
+      "emoji": "📦",
+      "title": "Docker hello",
+      "hook": "Push an image and run it.",
+      "picks": ["containers"]
+    },
+    {
+      "id": "network",
+      "emoji": "🚫",
+      "title": "Fortress mode",
+      "hook": "VPN + firewall because a tutorial said so.",
+      "picks": ["vpn", "firewall"]
+    }
+  ]
+}
