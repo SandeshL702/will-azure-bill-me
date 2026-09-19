@@ -1,11 +1,11 @@
 # Will Azure Bill Me?
 
 <p align="center">
-  <a href="https://sandeshl702.github.io/will-azure-bill-me/"><img src="docs/preview.png" width="820" alt="Will Azure bill me? — free-tier billing calculator" /></a>
+  <a href="https://sandeshog.github.io/will-azure-bill-me/"><img src="docs/preview.png" width="820" alt="Will Azure bill me? — free-tier billing calculator" /></a>
 </p>
 
 <p align="center">
-  <a href="https://sandeshl702.github.io/will-azure-bill-me/"><strong>Live → sandeshl702.github.io/will-azure-bill-me</strong></a>
+  <a href="https://sandeshog.github.io/will-azure-bill-me/"><strong>Live → sandeshog.github.io/will-azure-bill-me</strong></a>
 </p>
 
 <p align="center">
@@ -39,7 +39,7 @@ No login. No subscription. Rules live in `data/rules.json`.
 
 ## Live demo
 
-**[https://sandeshl702.github.io/will-azure-bill-me/](https://sandeshl702.github.io/will-azure-bill-me/)**
+**[https://sandeshog.github.io/will-azure-bill-me/](https://sandeshog.github.io/will-azure-bill-me/)**
 
 ## Stack
 
@@ -52,7 +52,7 @@ Azure free tier · will Azure bill me · Azure billing calculator · free tier t
 ## Run locally
 
 ```bash
-git clone https://github.com/SandeshL702/will-azure-bill-me.git
+git clone https://github.com/SandeshOG/will-azure-bill-me.git
 cd will-azure-bill-me
 npm i
 npm run dev
@@ -68,6 +68,6 @@ npm run build
 
 ## License
 
-MIT · [Sandesh Lanjewar](https://github.com/SandeshL702)
+MIT · [Sandesh Lanjewar](https://github.com/SandeshOG)
 
 Educational estimates from published free-tier patterns — not official Microsoft billing advice.

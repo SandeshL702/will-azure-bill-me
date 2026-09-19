@@ -225,9 +225,9 @@ export default function Home() {
         <p className="mx-auto mt-12 max-w-3xl text-xs leading-5 text-[#6e7681]">{DISCLAIMER}</p>
         <footer className="mt-10 flex flex-col gap-2 border-t border-[#21262d] pt-6 text-xs text-[#6e7681] sm:flex-row sm:justify-between">
           <p>
-            Built by <a className="hover:text-[#58A6FF]" href="https://github.com/SandeshL702">Sandesh</a>
+            Built by <a className="hover:text-[#58A6FF]" href="https://github.com/SandeshOG">Sandesh</a>
           </p>
-          <a className="hover:text-[#58A6FF]" href="https://github.com/SandeshL702/will-azure-bill-me">
+          <a className="hover:text-[#58A6FF]" href="https://github.com/SandeshOG/will-azure-bill-me">
             Source
           </a>
         </footer>
