@@ -1,38 +1,55 @@
-# Will Azure Bill Me? — Azure Free Tier Billing Calculator
+# Will Azure Bill Me?
 
-**Live:** [sandeshl702.github.io/will-azure-bill-me](https://sandeshl702.github.io/will-azure-bill-me/)
+<p align="center">
+  <a href="https://sandeshl702.github.io/will-azure-bill-me/"><img src="docs/preview.png" width="820" alt="Will Azure bill me? — free-tier billing calculator" /></a>
+</p>
 
-Toggle what you plan to deploy. See what still bills after Stop — before the invoice hits.
+<p align="center">
+  <a href="https://sandeshl702.github.io/will-azure-bill-me/"><strong>Live → sandeshl702.github.io/will-azure-bill-me</strong></a>
+</p>
 
-Built for students and builders on **Azure free tier** who keep asking: *will Azure charge me?*
+<p align="center">
+  <img src="https://img.shields.io/badge/live-demo-0f766e?style=flat-square" alt="live" />
+  <img src="https://img.shields.io/badge/Azure-free%20tier-0078D4?style=flat-square&logo=microsoftazure&logoColor=white" alt="azure" />
+  <img src="https://img.shields.io/badge/license-MIT-111827?style=flat-square" alt="MIT" />
+  <img src="https://img.shields.io/badge/no%20login-needed-111?style=flat-square" alt="no login" />
+</p>
 
-## Who this is for
+**Will Azure bill me?** is a free-tier billing calculator for students and builders.
 
-- You spun up a VM / App Service / SQL and aren’t sure what’s free vs paid
-- Free-tier docs list services, not the companions a wizard creates
-- You need a fast **Azure billing calculator** without logging into Cost Management
+You pick what you think you are deploying. The tool adds Azure’s silent companions (disk, public IP, …) and tells you what still bills after you hit Stop — before the invoice lands.
 
-## What it does
+## Who it is for
 
-1. Pick resources you think you’re deploying
-2. Engine expands **hidden companions** (VM → disk + public IP)
-3. Verdict: free-tier meters vs always-on charges — including what bills after deallocate
+- Students on **Azure free tier** who are scared of surprise charges
+- Builders spinning up a VM / website / container for a lab
+- Anyone who wants a fast answer without opening Cost Management
+
+## Features
+
+| Area | What you get |
+|---|---|
+| Scene presets | AZ-104 lab, website, Docker, fortress mode |
+| Resource list | Free / careful / will-bill tags |
+| Silent companions | VM → disk + public IP and more |
+| Verdict | What bills even after Stop / deallocate |
+| Share | Copy a scene link |
 
 No login. No subscription. Rules live in `data/rules.json`.
 
-## How it works
+## Live demo
 
-```text
-You toggle resources
-        ↓
-lib/engine.ts expands companions + free-tier rules
-        ↓
-Verdict: safe / will bill / bills even after Stop
-```
+**[https://sandeshl702.github.io/will-azure-bill-me/](https://sandeshl702.github.io/will-azure-bill-me/)**
 
-Educational scenario graph — not official Microsoft Cost Management advice.
+## Stack
 
-## Quickstart
+Next.js · TypeScript · Tailwind CSS · static rules engine
+
+## SEO keywords
+
+Azure free tier · will Azure bill me · Azure billing calculator · free tier traps · cloud cost for students · silent companions · deallocate still bills
+
+## Run locally
 
 ```bash
 git clone https://github.com/SandeshL702/will-azure-bill-me.git
@@ -43,16 +60,14 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-Static export for GitHub Pages:
+Static export (GitHub Pages):
 
 ```bash
 npm run build
 ```
 
-## Stack
-
-Next.js · TypeScript · Tailwind CSS · static rules engine (`lib/engine.ts`)
-
 ## License
 
 MIT · [Sandesh Lanjewar](https://github.com/SandeshL702)
+
+Educational estimates from published free-tier patterns — not official Microsoft billing advice.
